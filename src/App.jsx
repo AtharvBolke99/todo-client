@@ -6,12 +6,14 @@ import { Toaster, toast } from "react-hot-toast";
 import { SquarePen, Trash } from "lucide-react";
 
 function App() {
+
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
+
+  
   const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [oldTodo, setOldTodo] = useState("");
   const [isEditing, setIsEditing] = useState(false);
-
-  const BASE_URL = "http://localhost:8080";
 
   const loaddata = async () => {
     const response = await axios.get(`${BASE_URL}`);
