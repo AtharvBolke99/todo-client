@@ -16,7 +16,7 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
 
   const loaddata = async () => {
-    const response = await axios.get(`${BASE_URL}/`);
+    const response = await axios.get(`${BASE_URL}/todos`);
     setTodos(response.data.data);
   };
 
