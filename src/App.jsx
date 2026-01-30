@@ -17,7 +17,6 @@ function App() {
 
   const loaddata = async () => {
     const response = await axios.get(`${BASE_URL}/`);
-    // console.log(response.data.data);
     setTodos(response.data.data);
   };
 
